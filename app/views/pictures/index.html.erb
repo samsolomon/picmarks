@@ -1,0 +1,13 @@
+<h1>index.html.erb</h1>
+
+<ul>
+	<% @pictures.each do |pic| %>
+		<li>
+			<p>
+			<%= link_to(image_tag(pic.url, :width => 200), picture_url(pic)) %>
+			<%= link_to "Details", picture_path(pic) %>
+			<%= link_to "Delete", picture_path(pic), :method => :delete %>
+		</p>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,8 @@
+<h3>_form.html.erb</h3>
+
+<%= form_for @picture do |f| %>
+	<%= f.label "URL:", :url %> <%= f.text_field :url %>
+	<%= f.label "Note", :note %> <%= f.text_field :note %>
+	<%= f.submit %>
+<% end %>
+
